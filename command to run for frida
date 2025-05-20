@@ -1,0 +1,25 @@
+Laptop:
+#identify app name
+adb shell pm list packages | grep app
+
+#make sure the version matches the one you install on your laptop
+pip install frida-tools
+   31  frida --version
+
+run frida on the clietn
+frida -U -f %package-name-here% -l /home/aja/Downloads/ssl_bypass.js
+
+
+
+
+Android:
+
+Download the Frida Server:
+Go to the Frida GitHub releases page and download the appropriate version of the Frida server for your device architecture.
+  If you're working with Android, download the version matching your device’s architecture (e.g., arm, arm64, x86).
+
+
+ adb push frida-server /data/local/tmp/
+chmod 755 /data/local/tmp/frida-server
+/data/local/tmp/frida-server &
+
