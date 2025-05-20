@@ -1,3 +1,5 @@
+###please make sure to use Google API based  mobile image on AVD
+
 Laptop:
 #identify app name
 adb shell pm list packages | grep app
